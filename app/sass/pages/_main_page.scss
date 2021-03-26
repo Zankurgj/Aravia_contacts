@@ -25,7 +25,10 @@
     font-weight: bold;
     margin-bottom: 32px;
   }
-
+  .page-contacts-map-section {
+    overflow: hidden;
+    padding: 0 0 25px 0;
+  }
   .container--page-contacts-map {
     position: relative;
     height: 508px;
@@ -33,51 +36,77 @@
     padding: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../images/dest/office1.png");
-    overflow: hidden;
     @media screen and (max-width: $mobile-bp) {
       height: auto;
       padding-top: 450px;
-      background-size: auto;
+    }
+  }
+  .page-contacts-map-content {
+    position: absolute;
+    top: 0;
+    width: 75%;
+    height: 508px;
+    padding: 0;
+    margin: 0;
+    @media screen and (max-width: $mobile-bp) {
+      width: 100%;
+    }
+  }
+  .page-contacts-map-content--1 {
+    left: 0;
+    @media screen and (max-width: 1900px) {
+      left: -150px;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      left: 0;
+    }
+  }
+  .page-contacts-map-content--2 {
+    right: 0;
+    @media screen and (max-width: 1900px) {
+      right: -150px;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      right: 0;
     }
   }
   .container--page-contacts-map1 {
     margin-bottom: 42px;
-    background-position: right top;
-    @media screen and (max-width: 1428px) {
-      background-position: right -210px top;
-    }
-    @media screen and (max-width: 1250px) {
-      background-position: right -380px top;
-    }
-    @media screen and (max-width: 1080px) {
-      background-position: right -520px top;
-    }
-    @media screen and (max-width: $mobile-bp) {
-      background-position: right -860px top -10px;
-    }
-    @media screen and (max-width: 600px) {
-      background-position: right -1070px top -10px;
-    }
+    // background-position: right top;
+    // @media screen and (max-width: 1428px) {
+    //   background-position: right -210px top;
+    // }
+    // @media screen and (max-width: 1250px) {
+    //   background-position: right -380px top;
+    // }
+    // @media screen and (max-width: 1080px) {
+    //   background-position: right -520px top;
+    // }
+    // @media screen and (max-width: $mobile-bp) {
+    //   background-position: right -860px top -10px;
+    // }
+    // @media screen and (max-width: 600px) {
+    //   background-position: right -1070px top -10px;
+    // }
   }
   .container--page-contacts-map2 {
     margin-bottom: 65px;
-    background-position: left 760px top;
-    @media screen and (max-width: 1600px) {
-      background-position: left 450px top;
-    }
-    @media screen and (max-width: 1250px) {
-      background-position: left 260px top;
-    }
-    @media screen and (max-width: 1100px) {
-      background-position: left 180px top;
-    }
-    @media screen and (max-width: $mobile-bp) {
-      background-position: right -860px top -10px;
-    }
-    @media screen and (max-width: 600px) {
-      background-position: right -1070px top -10px;
-    }
+    // background-position: left 760px top;
+    // @media screen and (max-width: 1600px) {
+    //   background-position: left 450px top;
+    // }
+    // @media screen and (max-width: 1250px) {
+    //   background-position: left 260px top;
+    // }
+    // @media screen and (max-width: 1100px) {
+    //   background-position: left 180px top;
+    // }
+    // @media screen and (max-width: $mobile-bp) {
+    //   background-position: right -860px top -10px;
+    // }
+    // @media screen and (max-width: 600px) {
+    //   background-position: right -1070px top -10px;
+    // }
   }
   .page-contacts-map-col {
     max-width: 50%;
@@ -117,6 +146,9 @@
   .page-contacts-map-inner--1 {
     top: -18px;
     right: 0;
+    @media screen and (max-width: $mobile-bp) {
+      top: 0;
+    }
     &::after {
       left: 0;
     }
@@ -124,6 +156,9 @@
   .page-contacts-map-inner--2 {
     top: 12px;
     left: 0;
+    @media screen and (max-width: $mobile-bp) {
+      top: 0;
+    }
     &::after {
       right: 0;
     }

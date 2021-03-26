@@ -32,6 +32,7 @@
         <h2 class="h2--page-contacts">Офис компании «Аравия»</h2>
       </div>
       <div class="container container--page-contacts-map container--page-contacts-map1">
+        <div class="page-contacts-map-content page-contacts-map-content--1" id="map2"></div>
         <div class="container">
           <div class="row row--page-contacts-map">
             <div class="page-contacts-map-col page-contacts-map-col--1">
@@ -61,6 +62,7 @@
         <h2 class="h2--page-contacts">Учебный центр "Аравия" и розничный магазин</h2>
       </div>
       <div class="container container--page-contacts-map container--page-contacts-map2">
+        <div class="page-contacts-map-content page-contacts-map-content--2" id="map"></div>
         <div class="container">
           <div class="row row--page-contacts-map">
             <div class="page-contacts-map-col page-contacts-map-col--2">
@@ -173,7 +175,84 @@
     </section>
   </div>
 
+  <script src="//api-maps.yandex.ru/2.1/?apikey=adfea7f6-bae5-4b78-8809-406a7947eb1b&amp;lang=ru_RU"></script>
+  <script>
+    function init() {
+      var pointA = [55.75235139663333, 37.717062607162475],
+        pointB = [55.754299, 37.71459],
+        multiRoute = new ymaps.multiRouter.MultiRoute({
+          referencePoints: [
+            pointA,
+            pointB
+          ],
+          params: {
+            routingMode: 'pedestrian'
+          }
+        }, {
+          boundsAutoApply: true
+        });
+      var myMap = new ymaps.Map('map', {
+        center: [55.754299068972955, 37.714590499999915],
+        zoom: 12
+      }, {});
 
+
+      var pointAb = [55.75235139663333, 37.717062607162475],
+        pointBb = [55.75413633145377, 37.71478809391783],
+        multiRoute2 = new ymaps.multiRouter.MultiRoute({
+          referencePoints: [
+            pointAb,
+            pointBb
+          ],
+          params: {
+            routingMode: 'pedestrian'
+          }
+        }, {
+          boundsAutoApply: true
+        });
+      var myMap2 = new ymaps.Map('map2', {
+        center: [55.754299068972955, 37.714590499999915],
+        zoom: 12
+      }, {});
+
+
+      var glyphIcon1 = new ymaps.Placemark([55.75413633145377, 37.71478809391783], { hintContent: 'Офис компании "Аравия"' }, {
+        preset: 'islands#blueGlyphIcon',
+        iconGlyph: 'home',
+        iconGlyphColor: 'blue'
+
+      }),
+
+        glyphIcon3 = new ymaps.Placemark([55.75443633145377, 37.714590499999915], { hintContent: 'Магазин компании "Аравия"' }, {
+          preset: 'islands#blueGlyphIcon',
+          iconGlyph: 'shopping-cart',
+          iconGlyphColor: 'blue'
+
+        }),
+
+        glyphIcon2 = new ymaps.Placemark([55.75443633145377, 37.71453809391783], { hintContent: 'Учебный центр "Аравия"' }, {
+          preset: 'islands#glyphIcon',
+          iconGlyph: 'education',
+          iconGlyphColor: 'blue'
+        })
+
+      myMap.geoObjects
+        //  .add(glyphIcon1)
+        .add(glyphIcon3)
+        .add(glyphIcon2);
+
+      myMap.behaviors.disable('scrollZoom');
+      myMap.geoObjects.add(multiRoute);
+
+      myMap2.geoObjects.add(glyphIcon1);
+      myMap2.behaviors.disable('scrollZoom');
+      myMap2.geoObjects.add(multiRoute2);
+
+    }
+
+    ymaps.ready(init);
+
+  </script>
   <script src="js/app.min.js"></script>
 </body>
 
