@@ -251,6 +251,10 @@
       flex-direction: column;
     }
   }
+  .page-contacts-form-checkbox-inner {
+    display: flex;
+    align-items: flex-start;
+  }
   .page-contacts-form-checkbox--wrapper {
     cursor: pointer;
     @media screen and (max-width: $mobile-bp) {
@@ -285,8 +289,12 @@
     }
   }
   .page-contacts-form-checkbox-text {
+    color: $textcolor;
     font-size: 12px;
     text-decoration: underline;
+    &:hover {
+      color: $accent;
+    }
   }
   .page-contacts-form-btn {
     padding: 12px 32px 10px;
