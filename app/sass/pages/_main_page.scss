@@ -256,9 +256,12 @@
   }
   .page-contacts-form-item-input {
     width: 100%;
+    height: auto;
     border: 1px solid #b5b5b5;
     padding: 10px 18px;
     font-size: 16px;
+    font-weight: normal;
+    max-width: 100%;
     line-height: 1.5;
     background-color: #fff;
     &:focus {
