@@ -72,41 +72,9 @@
   }
   .container--page-contacts-map1 {
     margin-bottom: 42px;
-    // background-position: right top;
-    // @media screen and (max-width: 1428px) {
-    //   background-position: right -210px top;
-    // }
-    // @media screen and (max-width: 1250px) {
-    //   background-position: right -380px top;
-    // }
-    // @media screen and (max-width: 1080px) {
-    //   background-position: right -520px top;
-    // }
-    // @media screen and (max-width: $mobile-bp) {
-    //   background-position: right -860px top -10px;
-    // }
-    // @media screen and (max-width: 600px) {
-    //   background-position: right -1070px top -10px;
-    // }
   }
   .container--page-contacts-map2 {
     margin-bottom: 65px;
-    // background-position: left 760px top;
-    // @media screen and (max-width: 1600px) {
-    //   background-position: left 450px top;
-    // }
-    // @media screen and (max-width: 1250px) {
-    //   background-position: left 260px top;
-    // }
-    // @media screen and (max-width: 1100px) {
-    //   background-position: left 180px top;
-    // }
-    // @media screen and (max-width: $mobile-bp) {
-    //   background-position: right -860px top -10px;
-    // }
-    // @media screen and (max-width: 600px) {
-    //   background-position: right -1070px top -10px;
-    // }
   }
   .page-contacts-map-col {
     max-width: 50%;
@@ -285,11 +253,6 @@
   }
   .page-contacts-form-checkbox--wrapper {
     cursor: pointer;
-    &:hover {
-      .page-contacts-form-checkbox-text {
-        text-decoration: none;
-      }
-    }
     @media screen and (max-width: $mobile-bp) {
       margin-bottom: 24px;
     }
