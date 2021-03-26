@@ -224,9 +224,15 @@
         });
       var myMap = new ymaps.Map('map', {
         center: [55.754299068972955, 37.714590499999915],
-        zoom: 12
+        zoom: 12,
+        controls: []
       }, {});
-
+      myMap.controls.add('zoomControl', {
+        position: {
+          right: '10px',
+          top: '10px',
+        }
+      });
 
       var pointAb = [55.75235139663333, 37.717062607162475],
         pointBb = [55.75413633145377, 37.71478809391783],
@@ -243,9 +249,16 @@
         });
       var myMap2 = new ymaps.Map('map2', {
         center: [55.754299068972955, 37.714590499999915],
-        zoom: 12
+        zoom: 12,
+        controls: []
       }, {});
 
+      myMap2.controls.add('zoomControl', {
+        position: {
+          left: '10px',
+          top: '10px',
+        }
+      });
 
       var glyphIcon1 = new ymaps.Placemark([55.75413633145377, 37.71478809391783], { hintContent: 'Офис компании "Аравия"' }, {
         preset: 'islands#blueGlyphIcon',
