@@ -3,3 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#phone")
   );
 });
+
+function onToggleContactForm() {
+  document.querySelector("#feedbackForm").classList.toggle("show");
+}

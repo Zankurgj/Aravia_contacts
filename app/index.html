@@ -106,76 +106,103 @@
         <p class="page-contacts-form-text">Пожалуйста, корректно заполните форму, чтобы мы могли оперативно с Вами
           связаться и максимально точно ответить на Ваши вопросы. Спасибо.
         </p>
+        <button class="page-contacts-form-btn page-contacts-form-btn--contacts" onclick="onToggleContactForm()">Написать
+          нам</button>
       </div>
-      <div class="container">
-        <form class="page-contacts-form">
-          <div class="row row--wrap">
-            <div class="page-contacts-form-col row row--wrap">
-              <div class="page-contacts-form-item-col">
-                <label class="page-contacts-form-item">
-                  <p class="page-contacts-form-item-title">Имя*</p>
-                  <input type="text" class="page-contacts-form-item-input" required>
-                </label>
-              </div>
-
-              <div class="page-contacts-form-item-col">
-                <label class="page-contacts-form-item">
-                  <p class="page-contacts-form-item-title">E-mail*</p>
-                  <input type="text" class="page-contacts-form-item-input" required>
-                </label>
-              </div>
-
-              <div class="page-contacts-form-item-col">
-                <label class="page-contacts-form-item">
-                  <p class="page-contacts-form-item-title">Контактный телефон*</p>
-                  <input type="text" class="page-contacts-form-item-input" required id="phone">
-                </label>
-              </div>
-
-              <div class="page-contacts-form-item-col">
-                <label class="page-contacts-form-item">
-                  <p class="page-contacts-form-item-title">Город</p>
-                  <select class="page-contacts-form-item-input page-contacts-form-item-input--select">
-                    <option value="" selected> Москва </option>
-                    <option value=""> option </option>
-                    <option value=""> option </option>
-                    <option value=""> option </option>
-                    <option value=""> option </option>
-                    <option value=""> option </option>
-                    <option value=""> option </option>
-                  </select>
-                </label>
-              </div>
-
-              <div class="page-contacts-form-item-col page-contacts-form-item-col--2">
-                <label class="page-contacts-form-item">
-                  <p class="page-contacts-form-item-title">Тематика которая Вас интересует*</p>
-                  <input type="text" class="page-contacts-form-item-input" required>
-                </label>
-              </div>
+    </section>
+    <section class="feedback-form-popup" id="feedbackForm">
+      <div class="feedback-form-popup-overlay" onclick="onToggleContactForm()"></div>
+      <form class="page-contacts-form">
+        <button type="button" class="page-contacts-form-btn-close" onclick="onToggleContactForm()">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <p class="page-contacts-form-title">для связи с нами <br>
+          заполните форму ниже:</p>
+        <div class="row row--wrap">
+          <div class="page-contacts-form-col row row--wrap">
+            <div class="page-contacts-form-item-col">
+              <label class="page-contacts-form-item">
+                <p class="page-contacts-form-item-title">Имя*</p>
+                <input type="text" class="page-contacts-form-item-input" required>
+              </label>
             </div>
 
-            <div class="page-contacts-form-col">
+            <div class="page-contacts-form-item-col">
               <label class="page-contacts-form-item">
-                <p class="page-contacts-form-item-title">Ваше сообщение</p>
-                <textarea class="page-contacts-form-item-input page-contacts-form-item-input--textarea"></textarea>
+                <p class="page-contacts-form-item-title">E-mail*</p>
+                <input type="text" class="page-contacts-form-item-input" required>
               </label>
-              <div class="page-contacts-form-btns">
-                <div class="page-contacts-form-checkbox-inner">
-                  <label class="page-contacts-form-item page-contacts-form-checkbox--wrapper">
-                    <input type="checkbox" class="page-contacts-form-checkbox" required>
-                    <span class="page-contacts-form-checkbox-fake"></span>
-                  </label>
-                  <a href="#" target="_blank" class="page-contacts-form-checkbox-text">Согласие на обработку
-                    персональных
-                    данных</a>
-                </div>
-                <button type="submit" class="page-contacts-form-btn">Отправить</button>
-              </div>
+            </div>
+
+            <div class="page-contacts-form-item-col">
+              <label class="page-contacts-form-item">
+                <p class="page-contacts-form-item-title">Контактный телефон*</p>
+                <input type="text" class="page-contacts-form-item-input" id="phone">
+              </label>
+            </div>
+
+            <div class="page-contacts-form-item-col">
+              <label class="page-contacts-form-item">
+                <p class="page-contacts-form-item-title">Тема обращения</p>
+                <select class="page-contacts-form-item-input page-contacts-form-item-input--select">
+                  <option value="" selected> Заказ </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                </select>
+              </label>
+            </div>
+
+            <div class="page-contacts-form-item-col">
+              <label class="page-contacts-form-item">
+                <p class="page-contacts-form-item-title">Номер заказа (если имеется): </p>
+                <input type="text" class="page-contacts-form-item-input">
+              </label>
+            </div>
+
+            <div class="page-contacts-form-item-col">
+              <label class="page-contacts-form-item">
+                <p class="page-contacts-form-item-title">Город</p>
+                <select class="page-contacts-form-item-input page-contacts-form-item-input--select">
+                  <option value="" selected> Москва </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                  <option value=""> option </option>
+                </select>
+              </label>
             </div>
           </div>
-        </form>
-      </div>
+
+          <div class="page-contacts-form-col">
+            <label class="page-contacts-form-item">
+              <p class="page-contacts-form-item-title">Ваше сообщение</p>
+              <textarea class="page-contacts-form-item-input page-contacts-form-item-input--textarea"></textarea>
+            </label>
+            <div class="page-contacts-form-checkbox-inner">
+              <label class="page-contacts-form-item page-contacts-form-checkbox--wrapper">
+                <input type="checkbox" class="page-contacts-form-checkbox" required>
+                <span class="page-contacts-form-checkbox-fake"></span>
+              </label>
+              <a href="#" target="_blank" class="page-contacts-form-checkbox-text">Согласие на обработку
+                персональных
+                данных</a>
+            </div>
+            <div class="page-contacts-form-btns">
+              <div class="page-contacts-form-capcha">место для капчи</div>
+              <button type="submit" class="page-contacts-form-btn page-contacts-form-btn--submit">Отправить</button>
+            </div>
+            <div class="page-contacts-form-sub-text">
+              <span>* Обязательные для заполнения поля</span>
+            </div>
+          </div>
+        </div>
+      </form>
     </section>
   </div>
 
