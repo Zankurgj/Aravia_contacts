@@ -1,0 +1,331 @@
+.page-contacts {
+  .page-contacts-breadcrumbs-section {
+    padding: 28px 0 36px;
+  }
+  .page-contacts-breadcrumbs {
+    display: flex;
+    font-size: 14px;
+  }
+  .page-contacts-breadcrumbs-item {
+    color: $textcolor;
+    &:hover {
+      color: $accent;
+    }
+  }
+  .page-contacts-breadcrumbs-item-last {
+    color: $accent;
+  }
+  .h1--page-contacts {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  .h2--page-contacts {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
+
+  .container--page-contacts-map {
+    position: relative;
+    height: 508px;
+    max-width: 1920px;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/dest/office1.png");
+    overflow: hidden;
+    @media screen and (max-width: $mobile-bp) {
+      height: auto;
+      padding-top: 450px;
+      background-size: auto;
+    }
+  }
+  .container--page-contacts-map1 {
+    margin-bottom: 42px;
+    background-position: right top;
+    @media screen and (max-width: 1428px) {
+      background-position: right -210px top;
+    }
+    @media screen and (max-width: 1250px) {
+      background-position: right -380px top;
+    }
+    @media screen and (max-width: 1080px) {
+      background-position: right -520px top;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      background-position: right -860px top -10px;
+    }
+    @media screen and (max-width: 600px) {
+      background-position: right -1070px top -10px;
+    }
+  }
+  .container--page-contacts-map2 {
+    margin-bottom: 65px;
+    background-position: left 760px top;
+    @media screen and (max-width: 1600px) {
+      background-position: left 450px top;
+    }
+    @media screen and (max-width: 1250px) {
+      background-position: left 260px top;
+    }
+    @media screen and (max-width: 1100px) {
+      background-position: left 180px top;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      background-position: right -860px top -10px;
+    }
+    @media screen and (max-width: 600px) {
+      background-position: right -1070px top -10px;
+    }
+  }
+  .page-contacts-map-col {
+    max-width: 50%;
+    flex-basis: 50%;
+    @media screen and (max-width: 1300px) {
+      max-width: 60%;
+      flex-basis: 60%;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  .page-contacts-map-col--1 {
+    margin-left: auto;
+  }
+  .page-contacts-map-inner {
+    position: relative;
+    padding: 30px 35px 35px 35px;
+    @media screen and (max-width: $mobile-bp) {
+      background-color: $purple;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 960px;
+      height: 100%;
+      background-color: $purple;
+      pointer-events: none;
+      @media screen and (max-width: $mobile-bp) {
+        display: none;
+      }
+    }
+  }
+  .page-contacts-map-inner--1 {
+    top: -18px;
+    right: 0;
+    &::after {
+      left: 0;
+    }
+  }
+  .page-contacts-map-inner--2 {
+    top: 12px;
+    left: 0;
+    &::after {
+      right: 0;
+    }
+  }
+  .page-contacts-map-text-block {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 35px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .page-contacts-map-text {
+    display: block;
+    font-size: 22px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.2;
+  }
+  a.page-contacts-map-text {
+    &:hover {
+      color: rgba($color: #fff, $alpha: 0.8);
+    }
+  }
+  .page-contacts-map-img {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    @media screen and (max-width: $mobile-bp) {
+      display: none;
+    }
+  }
+  .page-contacts-map-img--1 {
+    width: 439px;
+    left: 282px;
+    bottom: -102px;
+    @media screen and (max-width: 1300px) {
+      width: 379px;
+      left: 239px;
+      bottom: -32px;
+    }
+  }
+  .page-contacts-map-img--2 {
+    width: 439px;
+    left: 292px;
+    bottom: -25px;
+    @media screen and (max-width: 1300px) {
+      width: 379px;
+      left: 372px;
+      bottom: 35px;
+    }
+  }
+  .page-contacts-map-icon {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin: 0 0 24px 24px;
+  }
+  .page-contacts-form-text {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .page-contacts-form-col {
+    max-width: calc((100% - 16px) / 2);
+    flex-basis: calc((100% - 16px) / 2);
+    margin-right: 16px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      max-width: 100%;
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+  .page-contacts-form-item-col {
+    max-width: calc((100% - 16px) / 2);
+    flex-basis: calc((100% - 16px) / 2);
+    margin-right: 16px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    @media screen and (max-width: 550px) {
+      max-width: 100%;
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+  .page-contacts-form-item-col--2 {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+  .page-contacts-form-item {
+    display: block;
+    margin-bottom: 12px;
+  }
+  .page-contacts-form-item-title {
+    font-size: 16px;
+  }
+  .page-contacts-form-item-input {
+    width: 100%;
+    border: 1px solid #b5b5b5;
+    padding: 10px 18px;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+    &:focus {
+      border-color: #a5a5a5;
+      outline: none;
+    }
+  }
+  .page-contacts-form-item-input--textarea {
+    resize: none;
+    height: 128px;
+  }
+
+  .page-contacts-form-btns {
+    display: flex;
+    padding-top: 12px;
+    @media screen and (max-width: $mobile-bp) {
+      flex-direction: column;
+    }
+  }
+  .page-contacts-form-checkbox--wrapper {
+    cursor: pointer;
+    &:hover {
+      .page-contacts-form-checkbox-text {
+        text-decoration: none;
+      }
+    }
+    @media screen and (max-width: $mobile-bp) {
+      margin-bottom: 24px;
+    }
+  }
+  .page-contacts-form-checkbox {
+    @extend .visually-hidden;
+    &:checked + .page-contacts-form-checkbox-fake {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  .page-contacts-form-checkbox-fake {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #b5b5b5;
+    margin-right: 6px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+      background-color: #dc2c7a;
+      opacity: 0;
+    }
+  }
+  .page-contacts-form-checkbox-text {
+    font-size: 12px;
+    text-decoration: underline;
+  }
+  .page-contacts-form-btn {
+    padding: 12px 32px 10px;
+    margin-left: auto;
+    background-color: #592c82;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1;
+    &:hover {
+      color: #fff;
+      background-color: #dc2c7b;
+    }
+    &:disabled {
+      opacity: 0.6;
+      cursor: default;
+      &:hover {
+        color: #fff;
+        background-color: #592c82;
+      }
+    }
+    @media screen and (max-width: $mobile-bp) {
+      margin-left: 0;
+    }
+  }
+  .page-contacts-form-item-input--select {
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    background-image: url("../images/dest/dd-arrow.png");
+    appearance: none;
+    padding: 10px 30px 10px 18px;
+  }
+  .container--contacts-form-section-info {
+    margin-bottom: 32px;
+  }
+  .page-contacts-form-section {
+    margin-bottom: 55px;
+  }
+}

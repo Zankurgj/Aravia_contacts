@@ -1,0 +1,53 @@
+.page-contacts {
+  min-width: 320px;
+  position: relative;
+  background-color: $white;
+  font-family: $mainfamily;
+  color: $textcolor;
+  font-size: $fontsize;
+  line-height: 1.5;
+  // overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+
+  p {
+    margin: 0;
+  }
+  button,
+  .btn,
+  input[type="submit"] {
+    background-color: transparent;
+    border-style: none;
+    border-width: none;
+    border-color: transparent;
+    font-family: $mainfamily;
+    transition: all $base-duration $base-timing;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+  label {
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: $accent;
+    transition: color $base-duration $base-timing;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  input,
+  textarea {
+    font-family: $mainfamily;
+  }
+}
