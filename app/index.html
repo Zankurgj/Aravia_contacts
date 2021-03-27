@@ -207,8 +207,18 @@
   </div>
 
   <script src="//api-maps.yandex.ru/2.1/?apikey=adfea7f6-bae5-4b78-8809-406a7947eb1b&amp;lang=ru_RU"></script>
+  <script src="js/app.min.js"></script>
   <script>
     function init() {
+      var mapCenter = {
+        mobile: [55.75319181862033, 37.71586723149101],
+        desktop: [55.753306780507955, 37.71360115306179]
+      }
+      var map2Center = {
+        mobile: [55.75319181862033, 37.71586723149101],
+        desktop: [55.75327652741261, 37.71827049076836]
+      }
+      var windowState = getWindowState();
       var pointA = [55.75235139663333, 37.717062607162475],
         pointB = [55.754299, 37.71459],
         multiRoute = new ymaps.multiRouter.MultiRoute({
@@ -219,14 +229,14 @@
           params: {
             routingMode: 'pedestrian'
           }
-        }, {
-          boundsAutoApply: true
         });
+
       var myMap = new ymaps.Map('map', {
-        center: [55.754299068972955, 37.714590499999915],
-        zoom: 12,
+        center: mapCenter[windowState],
+        zoom: 17,
         controls: []
       }, {});
+
       myMap.controls.add('zoomControl', {
         position: {
           right: '10px',
@@ -244,12 +254,11 @@
           params: {
             routingMode: 'pedestrian'
           }
-        }, {
-          boundsAutoApply: true
         });
+
       var myMap2 = new ymaps.Map('map2', {
-        center: [55.754299068972955, 37.714590499999915],
-        zoom: 12,
+        center: map2Center[windowState],
+        zoom: 17,
         controls: []
       }, {});
 
@@ -292,12 +301,29 @@
       myMap2.behaviors.disable('scrollZoom');
       myMap2.geoObjects.add(multiRoute2);
 
+      window.addEventListener('resize', changeCenterMap);
+
+      function changeCenterMap() {
+        var newWindowState = getWindowState();
+        if (windowState !== newWindowState) {
+          windowState = newWindowState;
+          myMap.setCenter(mapCenter[newWindowState]);
+          myMap2.setCenter(map2Center[newWindowState]);
+        }
+      }
     }
 
+    function getWindowState() {
+      var mobileBp = 992;
+      if (window.innerWidth <= mobileBp) {
+        return 'mobile';
+      } else {
+        return 'desktop';
+      }
+    }
     ymaps.ready(init);
 
   </script>
-  <script src="js/app.min.js"></script>
 </body>
 
 </html>

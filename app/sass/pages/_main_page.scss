@@ -40,7 +40,7 @@
     background-size: cover;
     @media screen and (max-width: $mobile-bp) {
       height: auto;
-      padding-top: 450px;
+      padding-top: 508px;
     }
   }
   .page-contacts-map-content {
@@ -56,21 +56,9 @@
   }
   .page-contacts-map-content--1 {
     left: 0;
-    @media screen and (max-width: 1900px) {
-      left: -150px;
-    }
-    @media screen and (max-width: $mobile-bp) {
-      left: 0;
-    }
   }
   .page-contacts-map-content--2 {
     right: 0;
-    @media screen and (max-width: 1900px) {
-      right: -150px;
-    }
-    @media screen and (max-width: $mobile-bp) {
-      right: 0;
-    }
   }
   .container--page-contacts-map1 {
     margin-bottom: 42px;
@@ -98,6 +86,7 @@
     padding: 30px 35px 35px 35px;
     @media screen and (max-width: $mobile-bp) {
       background-color: $purple;
+      margin: 0 -15px;
     }
     &::after {
       content: "";
@@ -177,7 +166,7 @@
     bottom: -25px;
     @media screen and (max-width: 1300px) {
       width: 379px;
-      left: 372px;
+      left: 300px;
       bottom: 35px;
     }
   }

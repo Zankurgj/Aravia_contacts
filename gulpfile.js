@@ -44,7 +44,7 @@ function styles() {
 
 function scripts() {
   return src([
-    // 'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+    // "node_modules/jquery/dist/jquery.min.js", // npm vendor example (npm i --save-dev jquery)
     "node_modules/inputmask/dist/inputmask.js",
     "app/js/app.js", // app.js. Always at the end
   ])
